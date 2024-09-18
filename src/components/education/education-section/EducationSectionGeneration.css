@@ -1,0 +1,39 @@
+.educationsContainer {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: stretch; 
+    gap: 10px; 
+}
+
+.educationContainer {
+    flex: 1 1 200px; 
+    max-width: 33.33%; 
+    box-sizing: border-box;
+    border: 1px solid #e1e0e0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    min-height: 150px; 
+    border-radius: 0.5rem;
+}
+
+.educationsHeadingContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.educationChipContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.educationType {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+

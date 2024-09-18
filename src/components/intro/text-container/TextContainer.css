@@ -1,0 +1,12 @@
+.main-intro-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 4%;
+    padding: 2%;
+}
+
+.typing-anim{
+    font-size: 1.2rem;
+    display: inline;
+}

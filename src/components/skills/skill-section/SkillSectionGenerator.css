@@ -1,0 +1,45 @@
+.skillsContainer {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: stretch; 
+    gap: 10px; 
+}
+
+.skillContainer {
+    flex: 1 1 200px; 
+    max-width: 25%; 
+    box-sizing: border-box;
+    border: 1px solid #e1e0e0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    min-height: 150px; 
+    border-radius: 0.5rem;
+}
+
+.skillChipContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.skillType {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.skillChip {
+    flex: 0 0 33.333%; 
+    font-size: 0.7rem;
+    padding: 4px 8px;
+}
+
+
+@media only screen and (max-width:800px){
+    .skillContainer {
+        background-color: aquamarine;
+    }
+ }

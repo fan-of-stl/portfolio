@@ -1,0 +1,46 @@
+.experience-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.experience-card{
+    width: 100%;
+    padding: 1%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #e1e0e0;
+    border-radius: 0.5rem;
+}
+
+.company-details-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.conpany-details-text-container{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: .5%;
+}
+
+.work-about-text{
+    font-size: 1rem;
+}
+
+.avatar{
+    background: aliceblue;
+    margin-top: .5%;
+}
+
+.tech-used{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+

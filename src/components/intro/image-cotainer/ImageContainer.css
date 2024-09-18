@@ -1,0 +1,18 @@
+.image-wrapper{
+    width: 300px;
+    height: 300px;
+    aspect-ratio: 1;
+    margin-top: 15%;
+    padding: 2%;
+}
+
+.image-cover{
+    width: 300px;
+    height: 300px;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    border: 1px solid black;
+
+    object-fit: cover;
+    object-position: center right;
+}
