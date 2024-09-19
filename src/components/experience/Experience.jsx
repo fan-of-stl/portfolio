@@ -15,7 +15,7 @@ const Experience = () => {
     "Colyseus",
   ];
   return (
-    <Container maxWidth="xl" className="experience">
+    <Container maxWidth="xl" className="experience" id="experience">
       <Typography sx={{fontSize: "1.5rem", lineHeight: "1rem", fontWeight: "600"}} className="heading">Experience</Typography>
 
       <Typography sx={{fontSize: "1rem", lineHeight: "1rem", fontWeight: "400", color: "gray"}} className="headline" mt={1} mb={1}>
@@ -44,9 +44,10 @@ const Experience = () => {
             </Typography>
           </Box>
 
-          <Box className="tech-used">
+          <Box className="tech-used"  sx={{display: "flex", flexWrap: "wrap", gap: "10px"}}>
+
             {techUsed.map((tech) => (
-              <Chip sx={{fontSize: "0.8rem", fontWeight: "400", borderRadius: 1}} label={tech} key={tech}/>
+              <Chip sx={{fontSize: "0.8rem", fontWeight: "400", borderRadius: 1, flex: "0 0 2%"}} label={tech} key={tech}/>
             ))}
           </Box>
         </Box>

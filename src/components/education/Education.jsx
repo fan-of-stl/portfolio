@@ -26,9 +26,9 @@ const Education = () => {
     }
   }
   return (
-    <Container maxWidth="xl" className='education'>
-      <Typography sx={{fontSize: "1.5rem", lineHeight: "1rem", fontWeight: "600"}}>Skills</Typography>
-      <Typography sx={{fontSize: "1rem", lineHeight: "1rem", fontWeight: "400", color: "gray"}} mt={1} mb={1}>A showcase of my skills</Typography>
+    <Container maxWidth="xl" className='education' id="education">
+      <Typography sx={{fontSize: "1.5rem", lineHeight: "1rem", fontWeight: "600"}}>Education</Typography>
+      <Typography sx={{fontSize: "1rem", lineHeight: "1rem", fontWeight: "400", color: "gray"}} mt={1} mb={1}>Details about my educational background.</Typography>
 
       <EducationSectionGeneration educations={educations}/>
     </Container>

@@ -49,7 +49,7 @@ const Projects = () => {
   };
 
   return (
-    <Container maxWidth="xl" className="projects">
+    <Container maxWidth="xl" className="projects" id="projects">
       <Typography
         sx={{ fontSize: "1.5rem", lineHeight: "1rem", fontWeight: "600" }}
         className="heading"

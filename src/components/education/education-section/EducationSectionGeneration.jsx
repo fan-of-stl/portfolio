@@ -1,10 +1,10 @@
-import { Avatar, Box, Typography } from "@mui/material";
+import { Avatar, Box, Stack, Typography } from "@mui/material";
 import React from "react";
 import "./EducationSectionGeneration.css";
 
 const EducationSectionGeneration = ({ educations }) => {
   return (
-    <Box maxWidth="xl" className="educationsContainer" mt={2}>
+    <Stack direction={{ xs: 'column', sm: 'row' }} maxWidth="xl" className="educationsContainer" mt={2}>
       {Object.keys(educations).map((educationType) => (
         <Box key={educationType} className="educationContainer">
           <Box className="educationsHeadingContainer">
@@ -48,7 +48,7 @@ const EducationSectionGeneration = ({ educations }) => {
           </Box> */}
         </Box>
       ))}
-    </Box>
+    </ Stack>
   );
 };
 

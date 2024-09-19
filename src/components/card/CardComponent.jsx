@@ -22,7 +22,16 @@ const CardComponent = ({
   key,
 }) => {
   return (
-    <Card sx={{ maxWidth: 350, boxShadow: 3, maxHeight: 600 }} key={key}>
+    <Card
+      sx={(theme) => ({
+        width: "25%",
+        [theme.breakpoints.up('xs')]: {
+          m: 1,
+          width: "100%",
+        },
+      })}
+      key={key}
+    >
       <CardMedia component="img" image={imagePath} alt={heading} />
       <CardContent>
         <Typography
@@ -52,7 +61,7 @@ const CardComponent = ({
                 padding: "2px 6px", // Smaller padding for a more compact size
                 height: "20px",
                 overflow: "break-word", // Adjust height for a smaller chip size
-                borderRadius: 1
+                borderRadius: 1,
               }}
               size="small"
               key={chip}

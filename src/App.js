@@ -7,19 +7,18 @@ import Projects from "./components/projects/Projects";
 import Services from "./components/services/Services";
 import Skills from "./components/skills/Skills";
 import Header from "./components/header/Header";
-import { Box } from "@mui/material";
+import { Container } from "@mui/material";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Box
+      <Container
+      maxWidth="xl"
         sx={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          
-          width: "100%",
         }}
       >
         <Intro className="intro" />
@@ -29,7 +28,7 @@ function App() {
         <Education />
         <Services />
         <Contact />
-      </Box>
+      </Container>
     </div>
   );
 }

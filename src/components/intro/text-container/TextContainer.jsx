@@ -19,7 +19,15 @@ const TextContainer = () => {
      extensive experience in developing WebGL-based projects using React, Node.js, Express, 
     A-frame, Babylon, Three.js, JavaScript, TypeScript, and Colyseus. 
     I am proficient in React and skilled in building robust client-side applications. My hands-on experience spans various projects in cloud system administration utilizing AWS, as well as the creation of dynamic content engagement tools and interactive metaverse projects.`;
-  return (
+  
+  
+    const contactMe = () => { 
+      const section = document.getElementById('contact'); 
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" }); 
+      }
+    };
+    return (
     <Container className="main-intro-container">
       <Typography className="name" sx={{fontSize: "3rem", fontFamily:"sans-serif", fontWeight: "600"}}>Abhishek Kumar</Typography>
 
@@ -40,7 +48,7 @@ const TextContainer = () => {
         </Typography>
       </Box>
 
-      <Button variant="contained" sx={{ background: "#000", color: "#fff", width: "150px" }}>
+      <Button variant="contained" sx={{ background: "#000", color: "#fff", width: "150px" }} onClick={contactMe}>
         Let's Connect
       </Button>
     </Container>

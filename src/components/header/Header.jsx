@@ -27,14 +27,22 @@ const Header = () => {
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
 
-  const handleChange = (e, value) =>
-    setValue((prevValue) => (prevValue === value ? null : value));
+  const handleChange = (e, newValue) => {
+    setValue(newValue);
+    const sectionId = navItems[newValue].toLowerCase(); 
+    const section = document.getElementById(sectionId); 
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" }); 
+    }
+  };
 
   const toggleDrawer = () => setIsDrawerOpen((prevValue) => !prevValue);
 
+  
+
   return (
     <React.Fragment>
-      <AppBar sx={{ background: "transparent", color: "black" }}>
+      <AppBar sx={{ background: "white", opacity: 0.95, color: "black" }}>
         <Toolbar>
           <DrawerComponent
             list={navItems}

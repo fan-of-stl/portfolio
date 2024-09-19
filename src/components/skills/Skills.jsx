@@ -22,7 +22,7 @@ const Skills = () => {
   
 
   return (
-    <Container maxWidth="xl" className="skills"  >
+    <Container maxWidth="xl" className="skills" id="skills"  >
       <Typography sx={{fontSize: "1.5rem", lineHeight: "1rem", fontWeight: "600"}}>Skills</Typography>
       <Typography sx={{fontSize: "1rem", lineHeight: "1rem", fontWeight: "400", color: "gray"}} mt={1} mb={1}>A showcase of my skills</Typography>
 
