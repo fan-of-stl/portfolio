@@ -1,7 +1,7 @@
 import { Container, Typography } from "@mui/material";
 import React from "react";
 import CardsGenerator from "../cards-generator/CardsGenerator";
-import './Projects.css'
+import "./Projects.css";
 import { ArrowRightAlt } from "@mui/icons-material";
 
 const Projects = () => {
@@ -14,8 +14,8 @@ const Projects = () => {
       buttonName: "View Project",
       buttonIcon: <ArrowRightAlt />,
       chipsList: ["AWS"],
-      key:  "aws",
-
+      key: "aws",
+      isButtonDisabled: true,
     },
     "Interactive Tools": {
       imagePath: "./infy_logo.png",
@@ -33,8 +33,8 @@ const Projects = () => {
         "Gulp.js",
         "Parcel.js",
       ],
-      key:  "infy",
-
+      key: "infy",
+      isButtonDisabled: true,
     },
     Metaverse: {
       imagePath: "./metaverse_logo.jpg",
@@ -44,7 +44,31 @@ const Projects = () => {
       buttonName: "View Project",
       buttonIcon: <ArrowRightAlt />,
       chipsList: ["Babylon.js", "Colyseus", "TypeScript"],
-      key:  "metaverse",
+      key: "metaverse",
+      isButtonDisabled: true,
+    },
+    "Credit Card and Personal Loan": {
+      imagePath: "./credit_loan.png",
+      headline: null,
+      bodyText: `Developed a scalable fintech UI for credit card and personal loan workflows using React and TypeScript. Integrated MUI for a consistent design system, leveraged TanStack Query for efficient server-state management, and used Axios for API communication.
+
+Built a dedicated Personal Loan module with structured application flow and eligibility handling.
+
+Implemented a standalone Credit Bureau section, allowing users to pull their credit bureau data with a 30-day cooldown restriction per request, ensuring compliance and controlled access.
+
+Enabled real-time eligibility checks and smooth user onboarding.`,
+      buttonIcon: <ArrowRightAlt />,
+      chipsList: [
+        "React",
+        "TypeScript",
+        "MUI",
+        "TanStack Query",
+        "Axios",
+        "React Hook Form",
+        "React Router",
+      ],
+      key: "credit-loan",
+      isButtonDisabled: true,
     },
   };
 

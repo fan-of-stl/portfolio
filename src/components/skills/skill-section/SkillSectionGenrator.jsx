@@ -1,4 +1,4 @@
-import { Box, Chip, Typography } from "@mui/material";
+import { Box, Chip, Stack, Typography } from "@mui/material";
 import React from "react";
 import "./SkillSectionGenerator.css"
 import capitalizeWords from "../../../utilities/capitalizeWords";
@@ -12,24 +12,28 @@ const SkillSectionGenrator = ({ skills }) => {
             {capitalizeWords(skillType)}
           </Typography>
           
-          <Box className="skillChipContainer">
+          <Stack padding={1} direction="row" flexWrap="wrap" gap={1} className="skillsStack">
           {skills[skillType].map((skill) => (
+            <Box width={100}>
             <Chip
+            // border={'1px solid red'}
             sx={{ 
+                width: '100%',
                 fontSize: "0.8rem",  
                 fontWeight: "400", 
                 padding: "2px 6px",  
                 height: "20px",
-                overflow: "break-word" ,      
+                // overflow: "break-word" ,      
                 borderRadius: 1
               }}
-              size="small"
+              size="medium"
               label={skill}
               key={skill}
-              className="skillChip"
+              // className="skillChip"
             />
+            </Box>
           ))}
-          </Box>
+          </Stack>
         </Box>
       ))}
     </Box>

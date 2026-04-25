@@ -18,13 +18,14 @@ const CardComponent = ({
   bodyText,
   buttonName,
   buttonIcon,
+  isButtonDisabled = false,
   chipsList = [],
   key,
 }) => {
   return (
     <Card
       sx={(theme) => ({
-        width: "25%",
+        width: "100%",
         [theme.breakpoints.up('xs')]: {
           m: 1,
           width: "100%",
@@ -70,7 +71,9 @@ const CardComponent = ({
         </Box>
       </CardContent>
       <CardActions>
-        <Button endIcon={buttonIcon}>{buttonName}</Button>
+        {<Button endIcon={buttonIcon} disabled={isButtonDisabled}>
+          {buttonName}
+        </Button>}
       </CardActions>
     </Card>
   );

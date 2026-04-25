@@ -1,54 +1,55 @@
-import { Avatar, Box, Stack, Typography } from "@mui/material";
+import { Avatar, Box, Grid, Typography } from "@mui/material";
 import React from "react";
-import "./EducationSectionGeneration.css";
 
 const EducationSectionGeneration = ({ educations }) => {
   return (
-    <Stack direction={{ xs: 'column', sm: 'row' }} maxWidth="xl" className="educationsContainer" mt={2}>
+    <Grid container spacing={2} mt={2}>
       {Object.keys(educations).map((educationType) => (
-        <Box key={educationType} className="educationContainer">
-          <Box className="educationsHeadingContainer">
-            <Avatar src={educations[educationType].src} />
-            <Box className="educationHeadingContainer--text">
-              <Typography sx={{fontSize: "1rem", lineHeight: "1rem", fontWeight: "600"}} className="educationType">
-                {educationType} - {educations[educationType].educationInstitute}
-              </Typography>
-              <Typography sx={{fontSize: "1rem", lineHeight: "1rem", fontWeight: "400", color: "gray"}} className="educationYear">
-                {educations[educationType].endDate ? (
-                  <>
-                    {educations[educationType].startDate} -{" "}
-                    {educations[educationType].endDate}
-                  </>
-                ) : (
-                  -educations[educationType].startDate
-                )}
-              </Typography>
+        <Grid item xs={12} sm={6} md={4} key={educationType}>
+          <Box
+            sx={{
+              border: "1px solid #e1e0e0",
+              p: 2,
+              borderRadius: 2,
+
+              // ❌ remove these
+              // height: "100%",
+              // justifyContent: "space-between",
+
+              display: "flex",
+              flexDirection: "column",
+              gap: 1.5, // ✅ better spacing control
+
+              transition: "0.3s",
+              "&:hover": {
+                boxShadow: "0px 8px 20px rgba(0,0,0,0.1)",
+                transform: "translateY(-4px)",
+              },
+            }}
+          >
+            <Box display="flex" gap={1}>
+              <Avatar src={educations[educationType].src} />
+              <Box>
+                <Typography fontSize="0.95rem" fontWeight={600}>
+                  {educationType} -{" "}
+                  {educations[educationType].educationInstitute}
+                </Typography>
+
+                <Typography fontSize="0.8rem" color="gray">
+                  {educations[educationType].endDate
+                    ? `${educations[educationType].startDate} - ${educations[educationType].endDate}`
+                    : educations[educationType].startDate}
+                </Typography>
+              </Box>
             </Box>
+
+            <Typography fontSize="0.9rem" color="gray" mt={1}>
+              {educations[educationType].result}
+            </Typography>
           </Box>
-
-          <Box sx={{fontSize: "1rem",  fontWeight: "400", color: "gray"}}>{educations[educationType].result}</Box>
-
-          {/* <Box className="educationChipContainer">
-          {educations[educationType].map((education) => (
-            <Chip
-            sx={{ 
-                fontSize: "0.8rem",  
-                fontWeight: "400", 
-                padding: "2px 6px",  
-                height: "20px",
-                overflow: "break-word" ,      
-                borderRadius: 1
-              }}
-              size="small"
-              label={education}
-              key={education}
-              className="educationChip"
-            />
-          ))}
-          </Box> */}
-        </Box>
+        </Grid>
       ))}
-    </ Stack>
+    </Grid>
   );
 };
 
